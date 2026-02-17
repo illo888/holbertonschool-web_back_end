@@ -54,3 +54,65 @@ The output is correct.
 The annotations appear properly in __annotations__.
 
 This task serves as the foundation for understanding how Python handles type hints and how they improve code clarity and maintainability.
+---
+
+# 🧩 Tasks
+
+## **Task 0: Basic Annotations – add**
+Create a function `add(a: float, b: float) -> float` that returns the sum of two floats.
+
+✔ Introduces basic type annotations  
+✔ Demonstrates function signature typing  
+
+---
+
+## **Task 1: Basic Annotations – concat**
+Write a function `concat(str1: str, str2: str) -> str` that concatenates two strings.
+
+---
+
+## **Task 2: Basic Annotations – floor**
+Write a function `floor(n: float) -> int` that returns the floor of a float.
+
+---
+
+## **Task 3: Basic Annotations – to_str**
+Write a function `to_str(n: float) -> str` that converts a float to a string.
+
+---
+
+## **Task 4: Define variables**
+Define and annotate variables:
+- `a: int = 1`
+- `pi: float = 3.14`
+- `i_understand_annotations: bool = True`
+- `school: str = "Holberton"`
+
+---
+
+## **Task 5: Complex types – sum_list**
+Write a function `sum_list(input_list: List[float]) -> float` that returns the sum of a list of floats.
+
+---
+
+## **Task 6: Complex types – sum_mixed_list**
+Write a function `sum_mixed_list(mxd_lst: List[Union[int, float]]) -> float`.
+
+---
+
+## **Task 7: Complex types – to_kv**
+Write a function `to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]`.
+
+---
+
+## **Task 8: Complex types – make_multiplier**
+Write a function `make_multiplier(multiplier: float) -> Callable[[float], float]`  
+that returns a function that multiplies a float by multiplier.
+
+---
+
+## **Task 9: Duck typing – element_length**
+Write a function:
+
+```python
+def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
