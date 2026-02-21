@@ -4,7 +4,17 @@ This project introduces asynchronous programming in Python using the `asyncio` l
 You will learn how to write non-blocking code, run multiple coroutines concurrently, create tasks, and measure execution time.
 
 ---
+## Author
+shaden almansour
+## Description
+This project covers asynchronous programming in Python 3 using `asyncio`. It explores how to write async coroutines, run concurrent tasks, measure runtime, and create asyncio tasks.
 
+## Learning Objectives
+- `async` and `await` syntax
+- How to execute an async program with `asyncio`
+- How to run concurrent coroutines
+- How to create asyncio tasks
+- How to use the `random` module
 ## 📘 Learning Objectives
 
 By the end of this project, you should be able to explain:
