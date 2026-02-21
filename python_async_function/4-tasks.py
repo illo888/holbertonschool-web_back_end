@@ -1,24 +1,19 @@
 #!/usr/bin/env python3
-"""
-Module that provides a function to run multiple task-based coroutines
-and return their results in ascending order based on completion time.
-"""
+"""Module for task_wait_n using task_wait_random."""
 
 import asyncio
 from typing import List
+
 task_wait_random = __import__('3-tasks').task_wait_random
 
 
 async def task_wait_n(n: int, max_delay: int) -> List[float]:
-    """
-    Spawn task_wait_random n times with the given max_delay.
-    Return the list of delays in ascending order without using sort().
-    """
-    tasks = [task_wait_random(max_delay) for _ in range(n)]
+    """Spawn task_wait_random n times and return delays in ascending order."""
     delays: List[float] = []
+    tasks = [task_wait_random(max_delay) for _ in range(n)]
 
-    for completed in asyncio.as_completed(tasks):
-        delay = await completed
+    for task in asyncio.as_completed(tasks):
+        delay = await task
         delays.append(delay)
 
     return delays
