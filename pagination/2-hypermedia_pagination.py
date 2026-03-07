@@ -5,7 +5,7 @@ Module that implements hypermedia pagination over a CSV dataset.
 
 import csv
 import math
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Any
 
 index_range = __import__("0-simple_helper_function").index_range
 
@@ -48,7 +48,7 @@ class Server:
             return []
         return dataset[start_index:end_index]
 
-    def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict[str, object]:
+    def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict[str, Any]:
         """
         Return a dictionary of pagination metadata and page data.
         """
