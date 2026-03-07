@@ -4,6 +4,7 @@ Deletion-resilient hypermedia pagination
 """
 
 import csv
+import math
 from typing import Dict, List
 
 
@@ -32,6 +33,7 @@ class Server:
         """
         if self.__indexed_dataset is None:
             dataset = self.dataset()
+            truncated_dataset = dataset[:1000]
             self.__indexed_dataset = {
                 i: dataset[i] for i in range(len(dataset))
             }
@@ -52,8 +54,7 @@ class Server:
             index = 0
 
         indexed_dataset = self.indexed_dataset()
-        assert isinstance(index, int) and index >= 0 and index < len(indexed_dataset)
-        assert isinstance(page_size, int) and page_size > 0
+        assert index >= 0 and index <= max(indexed_dataset.keys())
 
         data = []
         current_index = index
