@@ -39,7 +39,9 @@ Expected Output:
 I prefer const when I can. But sometimes let is okay
 
   return combination;
-}
+}.
+
+
 # ES6 Basic - Task 1: Block Scope
 
 ## Description
