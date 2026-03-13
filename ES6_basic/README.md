@@ -291,3 +291,33 @@ export default function getBudgetObject(income, gdp, capita) {
 
   return budget;
 }
+---
+```
+---
+# Task 8: Computed Property Names
+
+## Description
+
+This task demonstrates the use of **computed property names in ES6**.
+
+Instead of creating an empty object and adding properties later, ES6 allows defining dynamic property names directly inside the object.
+
+## File
+
+## Solution
+
+```javascript
+function getCurrentYear() {
+  const date = new Date();
+  return date.getFullYear();
+}
+
+export default function getBudgetForCurrentYear(income, gdp, capita) {
+  const year = getCurrentYear();
+
+  return {
+    [`income-${year}`]: income,
+    [`gdp-${year}`]: gdp,
+    [`capita-${year}`]: capita,
+  };
+}
