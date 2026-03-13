@@ -191,12 +191,33 @@ Default parameters allow a function to use predefined values when arguments are 
 
 In the original function, conditional statements were used to check if parameters were `undefined`.  
 Using ES6, we can simplify the function by assigning default values directly in the parameters.
+---
 ```
 ## File
-
+---
+```
 ## Solution
 
 ```javascript
 export default function getSumOfHoods(initialNumber, expansion1989 = 89, expansion2019 = 19) {
   return initialNumber + expansion1989 + expansion2019;
+}
+```
+---
+
+# Task 4: Rest Parameter Syntax
+
+## Description
+
+This task demonstrates the use of **rest parameters in ES6**.
+
+Rest parameters allow a function to accept an indefinite number of arguments and store them in an array.
+
+## File
+
+## Solution
+
+```javascript
+export default function returnHowManyArguments(...args) {
+  return args.length;
 }
