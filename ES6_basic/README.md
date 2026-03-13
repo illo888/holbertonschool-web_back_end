@@ -398,3 +398,26 @@ export default function createEmployeesObject(departmentName, employees) {
     [departmentName]: employees,
   };
 }
+---
+---
+```
+---
+# Task 12: Create a Report Object
+
+## Description
+
+This task demonstrates how to create an object containing employee information and a method to count departments.
+
+## File
+
+## Solution
+
+```javascript
+export default function createReportObject(employeesList) {
+  return {
+    allEmployees: employeesList,
+    getNumberOfDepartments(employees) {
+      return Object.keys(employees).length;
+    },
+  };
+}
