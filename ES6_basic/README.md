@@ -321,3 +321,36 @@ export default function getBudgetForCurrentYear(income, gdp, capita) {
     [`capita-${year}`]: capita,
   };
 }
+---
+```
+---
+# Task 9: ES6 Method Properties
+
+## Description
+
+This task demonstrates the use of **ES6 method property shorthand**.
+
+Instead of defining functions inside objects using the `function` keyword, ES6 allows defining methods directly.
+
+## File
+
+## Solution
+
+```javascript
+import getBudgetObject from './7-getBudgetObject.js';
+
+export default function getFullBudgetObject(income, gdp, capita) {
+  const budget = getBudgetObject(income, gdp, capita);
+
+  const fullBudget = {
+    ...budget,
+    getIncomeInDollars(income) {
+      return `$${income}`;
+    },
+    getIncomeInEuros(income) {
+      return `${income} euros`;
+    },
+  };
+
+  return fullBudget;
+}
