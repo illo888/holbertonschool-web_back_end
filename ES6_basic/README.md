@@ -354,3 +354,26 @@ export default function getFullBudgetObject(income, gdp, capita) {
 
   return fullBudget;
 }
+---
+```
+---
+# Task 10: For...of Loops
+
+## Description
+
+This task demonstrates the use of **ES6 `for...of` loops** to iterate through arrays.
+
+The goal is to replace the `for...in` loop and avoid using `var`, which is not recommended in ES6.
+
+## File
+
+## Solution
+
+```javascript
+export default function appendToEachArrayValue(array, appendString) {
+  for (const [index, value] of array.entries()) {
+    array[index] = appendString + value;
+  }
+
+  return array;
+}
