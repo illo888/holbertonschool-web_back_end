@@ -266,3 +266,28 @@ export default function getSanFranciscoDescription() {
 
   return `As of ${year}, it was the seventh-highest income county in the United States, with a per capita personal income of ${budget.income}. As of 2015, San Francisco proper had a GDP of ${budget.gdp}, and a GDP per capita of ${budget.capita}.`;
 }
+---
+```
+---
+# Task 7: Object Property Value Shorthand
+
+## Description
+
+This task demonstrates the **object property shorthand syntax** introduced in ES6.
+
+When the object key name is the same as the variable name, we can use the shorthand syntax.
+
+## File
+
+## Solution
+
+```javascript
+export default function getBudgetObject(income, gdp, capita) {
+  const budget = {
+    income,
+    gdp,
+    capita,
+  };
+
+  return budget;
+}
