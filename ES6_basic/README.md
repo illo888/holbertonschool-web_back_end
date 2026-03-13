@@ -221,3 +221,22 @@ Rest parameters allow a function to accept an indefinite number of arguments and
 export default function returnHowManyArguments(...args) {
   return args.length;
 }
+```
+---
+
+# Task 5: The Wonders of Spread Syntax
+
+## Description
+
+This task demonstrates the use of the **spread operator (`...`) in ES6**.
+
+The spread syntax allows arrays and strings to be expanded into individual elements.
+
+## File
+
+## Solution
+
+```javascript
+export default function concatArrays(array1, array2, string) {
+  return [...array1, ...array2, ...string];
+}
