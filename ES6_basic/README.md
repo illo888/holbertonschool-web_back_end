@@ -377,3 +377,24 @@ export default function appendToEachArrayValue(array, appendString) {
 
   return array;
 }
+---
+```
+---
+# Task 11: Iterator
+
+## Description
+
+This task demonstrates creating objects dynamically using ES6 computed property names.
+
+The function receives a department name and a list of employees and returns an object where the department name is the key and the employees array is the value.
+
+## File
+
+## Solution
+
+```javascript
+export default function createEmployeesObject(departmentName, employees) {
+  return {
+    [departmentName]: employees,
+  };
+}
