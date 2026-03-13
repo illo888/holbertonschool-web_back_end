@@ -64,6 +64,8 @@ ES6_basic/
 │
 ├── 0-constants.js
 ├── 1-block-scoped.js
+├── 2-arrow.js
+├── 3-default-parameter.js
 ├── README.md
 
 ```
@@ -153,9 +155,48 @@ export default function taskBlock(trueOrFalse) {
 [ false, true ]
 ```
 
+
 ---
 
-# Author
+# Task 2: Arrow Functions
 
-Holberton School
-Web Back-End Program
+## Description
+
+This task demonstrates how to rewrite a traditional JavaScript function using **ES6 arrow function syntax**.
+
+Arrow functions inherit `this` from their surrounding scope, which means we no longer need to store `this` inside another variable like `self`.
+
+## File
+
+## Solution
+
+```javascript
+export default function getNeighborhoodsList() {
+  this.sanFranciscoNeighborhoods = ['SOMA', 'Union Square'];
+
+  this.addNeighborhood = (newNeighborhood) => {
+    this.sanFranciscoNeighborhoods.push(newNeighborhood);
+    return this.sanFranciscoNeighborhoods;
+  };
+}
+---
+```
+# Task 3: Parameter Defaults
+
+## Description
+
+This task demonstrates the use of **default parameters in ES6**.
+
+Default parameters allow a function to use predefined values when arguments are not provided.
+
+In the original function, conditional statements were used to check if parameters were `undefined`.  
+Using ES6, we can simplify the function by assigning default values directly in the parameters.
+```
+## File
+
+## Solution
+
+```javascript
+export default function getSumOfHoods(initialNumber, expansion1989 = 89, expansion2019 = 19) {
+  return initialNumber + expansion1989 + expansion2019;
+}
